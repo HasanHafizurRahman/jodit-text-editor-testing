@@ -80,3 +80,139 @@ button:focus-visible {
   min-height: 400px;
   padding: 20px;
 }
+/* src/styles/editor.css */
+.editor-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.toolbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.jodit-container {
+  border-radius: 0 0 12px 12px;
+}
+
+.jodit-toolbar__box {
+  background: #f8fafc !important;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.jodit-toolbar-button {
+  transition: transform 0.2s ease;
+}
+
+.jodit-toolbar-button:hover {
+  transform: scale(1.1);
+}
+
+.jodit-wysiwyg {
+  min-height: 500px;
+  padding: 24px !important;
+  line-height: 1.6;
+  background: white;
+}
+
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.character-count {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.format-tips {
+  color: #6366f1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Dark mode styles */
+.dark .jodit-wysiwyg {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.dark .jodit-toolbar__box {
+  background: #334155 !important;
+  border-color: #475569;
+}
+
+.dark .editor-footer {
+  background: #334155;
+  border-color: #475569;
+}
+
+.dark .character-count {
+  color: #94a3b8;
+}
+
+.dark .format-tips {
+  color: #818cf8;
+}
+
+/* Table styling */
+.jodit-wysiwyg table {
+  margin: 1rem 0;
+}
+
+.jodit-wysiwyg table td,
+.jodit-wysiwyg table th {
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  transition: background 0.2s ease;
+}
+
+.jodit-wysiwyg table th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+.dark .jodit-wysiwyg table td,
+.dark .jodit-wysiwyg table th {
+  border-color: #475569;
+}
+
+.dark .jodit-wysiwyg table th {
+  background: #334155;
+}
+
+@media (max-width: 768px) {
+  .editor-container {
+    margin: 1rem;
+  }
+  
+  .jodit-wysiwyg {
+    padding: 16px !important;
+    min-height: 400px;
+  }
+}
